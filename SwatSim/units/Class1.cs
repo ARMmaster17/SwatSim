@@ -10,7 +10,7 @@ namespace units
     /// <summary>
     /// Offensive or defensive role
     /// </summary>
-    enum position
+    public enum position
     {
         offensive,
         defensive
@@ -18,7 +18,7 @@ namespace units
     /// <summary>
     /// Difficulty of AI, or scripted
     /// </summary>
-    enum difficulty
+    public enum difficulty
     {
         scripted,
         coward,
