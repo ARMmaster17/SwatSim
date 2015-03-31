@@ -97,30 +97,35 @@ namespace units
     }
     public class fighterHeavy : fighter
     {
-        public fighterHeavy(position pos)
+        public fighterHeavy(position pos, difficulty d, Point startPos)
         {
-            superInit(pos);
+            superInit(position.offensive, d, startPos);
+        }
+        public fighterHeavy(position pos, difficulty d, Point startPos, Rectangle bnd)
+        {
+            superInit(position.defensive, d, startPos, bnd);
         }
     }
-    public class fighterAssault : fighter
+    public class fighterMedium : fighter
     {
-        public fighterAssault(position pos)
+        public fighterMedium(position pos, difficulty d, Point startPos)
         {
-            superInit(pos);
+            superInit(position.offensive, d, startPos);
         }
-    }
-    public class fighterSniper : fighter
-    {
-        public fighterSniper(position pos)
+        public fighterMedium(position pos, difficulty d, Point startPos, Rectangle bnd)
         {
-            superInit(pos);
+            superInit(position.offensive, d, startPos, bnd);
         }
     }
     public class fighterLight : fighter
     {
-        public fighterLight(position pos)
+        public fighterLight(position pos, difficulty d, Point startPos)
         {
-            superInit(pos);
+            superInit(position.offensive, d, startPos);
+        }
+        public fighterLight(position pos, difficulty d, Point startPos, Rectangle bnd)
+        {
+            superInit(position.defensive, d, startPos, bnd);
         }
     }
     public class math
