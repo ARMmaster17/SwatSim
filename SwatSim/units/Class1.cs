@@ -159,4 +159,13 @@ namespace units
             }
         }
     }
+    public class movement
+    {
+        public static Point moveCoords(Decimal angle, Point p, Int length)
+        {
+            
+        }
+        }
+    }
+    }
 }
