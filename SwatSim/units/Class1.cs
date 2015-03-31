@@ -168,7 +168,10 @@ namespace units
     {
         public static Point moveCoords(Decimal angle, Point p, int length)
         {
-            
+            Point tp;
+            p.X = 0;
+            p.Y = 0;
+            return tp;
         }
     }
 }
