@@ -161,7 +161,7 @@ namespace units
     }
     public class movement
     {
-        public static Point moveCoords(Decimal angle, Point p, Int length)
+        public static Point moveCoords(Decimal angle, Point p, int length)
         {
             
         }
