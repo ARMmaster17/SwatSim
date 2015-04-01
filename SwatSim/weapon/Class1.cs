@@ -135,23 +135,23 @@ namespace arms
         }
     }
     /// <summary>
-    /// Creates weapon->GrenadeLauncher
+    /// Creates weapon->RocketLauncher
     /// </summary>
-    public class weaponGrenadeLauncher : weapon
+    public class weaponRocketLauncher : weapon
     {
-        public weaponGrenadeLauncher()
-            : base(weaponGrenadeLauncher.wInfo().wsDamage, weaponGrenadeLauncher.wInfo().wsClipSize, weaponGrenadeLauncher.wInfo().wsRateOfFire, weaponGrenadeLauncher.wInfo().wsName)
+        public weaponRocketLauncher()
+            : base(weaponRocketLauncher.wInfo().wsDamage, weaponRocketLauncher.wInfo().wsClipSize, weaponRocketLauncher.wInfo().wsRateOfFire, weaponRocketLauncher.wInfo().wsName)
         {
 
         }
         /// <summary>
-        /// Returns weapon definition
+        /// Returns weapon definition 
         /// </summary>
         /// <returns>Struct with weapon stats</returns>
         public static override weaponStats wInfo(weapon w)
         {
             weaponStats ws;
-            ws.wsName = "GrenadeLauncher";
+            ws.wsName = "RocketLauncher";
             ws.wsDamage = 100;
             ws.wsClipSize = 1;
             ws.wsRateOfFire = 0.25;
