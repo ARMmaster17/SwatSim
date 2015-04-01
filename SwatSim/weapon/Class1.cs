@@ -1,8 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#IF DEBUG
+using System.Diagnostics;
+#ENDIF
 
 namespace arms
 {
@@ -36,6 +39,9 @@ namespace arms
         /// <returns>Struct with weapon stats</returns>
         public static virtual weaponStats wInfo()
         {
+            #IF DEBUG
+            Debug.Write("Warning: Weapon wInfo() is not defined");
+            #ENDIF
             weaponStats ws;
             ws.wsName = "Empty weapon definition";
             ws.wsDamage = 0;
