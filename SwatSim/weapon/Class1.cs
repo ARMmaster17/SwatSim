@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 #IF DEBUG
 using System.Diagnostics;
 #ENDIF
@@ -16,6 +17,7 @@ namespace arms
         public readonly double rateOfFire;
 
         public readonly string GUIname;
+        public readonly Image wImage;
 
         public int clipFill;
 
@@ -26,12 +28,13 @@ namespace arms
         /// <param name="cSize">Size of clip in weapon</param>
         /// <param name="ROF">Rate of fire (per second)</param>
         /// <param name="gName">Name as it appears in the GUI</param>
-        public weapon(int dmg, int cSize, double ROF, string gName)
+        public weapon(int dmg, int cSize, double ROF, string gName, string wImagePath)
         {
             damage = dmg;
             clipSize = cSize;
             clipFill = cSize;
             rateOfFire = ROF;
+            wImage = Image.FromFile(wImagePath);
         }
         /// <summary>
         /// Returns weapon definition
@@ -93,7 +96,7 @@ namespace arms
     /// </summary>
     public class weaponAssaultRifle : weapon
     {
-        public weaponAssaultRifle() : base(weaponAssaultRifle.wInfo().wsDamage, weaponAssaultRifle.wInfo().wsClipSize, weaponAssaultRifle.wInfo().wsRateOfFire, weaponAssaultRifle.wInfo().wsName)
+        public weaponAssaultRifle() : base(weaponAssaultRifle.wInfo().wsDamage, weaponAssaultRifle.wInfo().wsClipSize, weaponAssaultRifle.wInfo().wsRateOfFire, weaponAssaultRifle.wInfo().wsName, "/img/ar.jpg")
         {
 
         }
@@ -116,7 +119,7 @@ namespace arms
     /// </summary>
     public class weaponPistol : weapon
     {
-        public weaponPistol() : base(weaponPistol.wInfo().wsDamage, weaponPistol.wInfo().wsClipSize, weaponPistol.wInfo().wsRateOfFire, weaponPistol.wInfo().wsName)
+        public weaponPistol() : base(weaponPistol.wInfo().wsDamage, weaponPistol.wInfo().wsClipSize, weaponPistol.wInfo().wsRateOfFire, weaponPistol.wInfo().wsName, "/img/ar.jpg")
         {
 
         }
@@ -140,7 +143,7 @@ namespace arms
     public class weaponRocketLauncher : weapon
     {
         public weaponRocketLauncher()
-            : base(weaponRocketLauncher.wInfo().wsDamage, weaponRocketLauncher.wInfo().wsClipSize, weaponRocketLauncher.wInfo().wsRateOfFire, weaponRocketLauncher.wInfo().wsName)
+            : base(weaponRocketLauncher.wInfo().wsDamage, weaponRocketLauncher.wInfo().wsClipSize, weaponRocketLauncher.wInfo().wsRateOfFire, weaponRocketLauncher.wInfo().wsName, "/img/ar.jpg")
         {
 
         }
@@ -171,7 +174,7 @@ namespace arms
         /// <param name="wClipSize">Size of clip</param>
         /// <param name="wRateOfFire">Rate of fire (per second)</param>
         /// <param name="wName">Name as it appears in the GUI</param>
-        public weaponCustom(int wDamage, int wClipSize, double wRateOfFire, string wName) : base(wDamage, wClipSize, wRateOfFire, wName)
+        public weaponCustom(int wDamage, int wClipSize, double wRateOfFire, string wName, string gImagePath) : base(wDamage, wClipSize, wRateOfFire, wName, gImagePath)
         {
             WeaponStats.wsDamage = wDamage;
             WeaponStats.wsClipSize = wClipSize;
