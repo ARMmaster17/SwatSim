@@ -53,6 +53,13 @@ namespace arms
             return ws;
         }
         /// <summary>
+        /// Returns the GUI image for weapontype
+        /// </summary>
+        public Image virtual getImage()
+        {
+            return wImage;
+        }
+        /// <summary>
         /// Fires weapon and modifies properties
         /// </summary>
         public void fire()
