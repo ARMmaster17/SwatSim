@@ -15,6 +15,7 @@ namespace SwatSimGUI
         public Form1()
         {
             InitializeComponent();
+            MessageBox.Show("DISCLAIMER: This program is for demostration purposes only. If you use this program in ANY KIND of real-world application, you do so at your own risk. For the full disclaimer, see DISCLAIMER.md in your application folder.");
         }
     }
 }
